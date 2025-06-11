@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernTech - Innovation at Your Fingertips</title>
+    <link rel="stylesheet"href="style.css"/>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">ModernTech</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="cta-nav" onclick="openModal('contactModal')">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Innovation Meets Excellence</h1>
+            <p>Transform your digital presence with cutting-edge solutions that drive results. We craft experiences that captivate, engage, and convert.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="openModal('getStartedModal')">Start Your Journey</button>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions tailored to elevate your business and exceed your expectations</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Digital Strategy</h3>
+                    <p>Comprehensive digital transformation strategies that align with your business goals and drive sustainable growth in the modern marketplace.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Creative Design</h3>
+                    <p>Stunning visual experiences that capture attention and communicate your brand story with impact and authenticity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Lightning-fast solutions optimized for speed, efficiency, and exceptional user experience across all devices and platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Us?</h2>
+                    <p>With over a decade of experience in digital innovation, we understand what it takes to create solutions that not only look amazing but deliver real business results.</p>
+                    <p>Our team of experts combines creativity with technical excellence to ensure every project exceeds expectations and drives meaningful growth for our clients.</p>
+                    <a href="#" class="btn btn-primary">Discover Our Story</a>
+                </div>
+                <div class="about-image">
+                    📊
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Team Members</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Join hundreds of satisfied clients who have achieved remarkable growth with our solutions</p>
+                <button class="btn btn-primary" onclick="openModal('getStartedModal')">Get Started Today</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ModernTech</h3>
+                    <p>Transforming businesses through innovative digital solutions and exceptional user experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ModernTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get Started Modal -->
+    <div id="getStartedModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('getStartedModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Start Your Journey</h2>
+                <p>Tell us about your project and we'll create a custom solution for you</p>
+            </div>
+            <form id="getStartedForm" onsubmit="handleGetStartedSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="budget">Project Budget</label>
+                    <select id="budget" name="budget" required>
+                        <option value="">Select your budget range</option>
+                        <option value="under-5k">Under $5,000</option>
+                        <option value="5k-15k">$5,000 - $15,000</option>
+                        <option value="15k-50k">$15,000 - $50,000</option>
+                        <option value="50k-100k">$50,000 - $100,000</option>
+                        <option value="over-100k">Over $100,000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Services Needed (Select all that apply)</label>
+                    <div class="service-options">
+                        <div class="service-option">
+                            <input type="checkbox" id="web-dev" name="services" value="web-development">
+                            <label for="web-dev">Web Development</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="mobile-app" name="services" value="mobile-app">
+                            <label for="mobile-app">Mobile App</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="digital-marketing" name="services" value="digital-marketing">
+                            <label for="digital-marketing">Digital Marketing</label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="consulting" name="services" value="consulting">
+                            <label for="consulting">Consulting</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="timeline">Project Timeline</label>
+                    <select id="timeline" name="timeline" required>
+                        <option value="">When do you need this completed?</option>
+                        <option value="asap">ASAP (Rush Job)</option>
+                        <option value="1-month">Within 1 month</option>
+                        <option value="3-months">Within 3 months</option>
+                        <option value="6-months">Within 6 months</option>
+                        <option value="flexible">I'm flexible</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Project Description</label>
+                    <textarea id="description" name="description" placeholder="Tell us more about your project, goals, and any specific requirements..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit Project Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+            <div class="modal-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to discuss your project? We'd love to hear from you!</p>
+            </div>
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Full Name</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <select id="contactSubject" name="contactSubject" required>
+                        <option value="">What can we help you with?</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="project-quote">Project Quote</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="support">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="contactMessage" placeholder="Tell us about your inquiry..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p>hello@moderntech.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Call Us</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏢</div>
+                    <div class="contact-details">
+                        <h4>Visit Us</h4>
+                        <p>123 Innovation Street, Tech City, TC 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('successModal')">&times;</span>
+            <div class="success-message">
+                <div class="checkmark">✅</div>
+                <h3>Thank You!</h3>
+                <p>Your request has been submitted successfully. We'll get back to you within 24 hours.</p>
+                <button class="btn-submit" onclick="closeModal('successModal')">Continue Exploring</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+       
+        document.querySelectorAll('.service-card, .about-text, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+       
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+            
+           
+            const form = modal.querySelector('form');
+            if (form) {
+                form.reset();
+            }
+        }
+
+        
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                closeModal(e.target.id);
+            }
+        });
+
+       
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const openModal = document.querySelector('.modal.show');
+                if (openModal) {
+                    closeModal(openModal.id);
+                }
+            }
+        });
+
+        // Handle Get Started form submission
+        function handleGetStartedSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.btn-submit');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            setTimeout(() => {
+            
+                const services = [];
+                const serviceCheckboxes = form.querySelectorAll('input[name="services"]:checked');
+                serviceCheckboxes.forEach(checkbox => {
+                    services.push(checkbox.value);
+                });
+                
+                
+                console.log('Get Started Form Data:', {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    company: formData.get('company'),
+                    budget: formData.get('budget'),
+                    services: services,
+                    timeline: formData.get('timeline'),
+                    description: formData.get('description')
+                });
+                
+                closeModal('getStartedModal');
+                openModal('successModal');
+                
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Project Request';
+            }, 2000);
+        }
+
+       
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.btn-submit');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            
+            setTimeout(() => {
+                
+                console.log('Contact Form Data:', {
+                    name: formData.get('contactName'),
+                    email: formData.get('contactEmail'),
+                    subject: formData.get('contactSubject'),
+                    message: formData.get('contactMessage')
+                });
+                
+                
+                closeModal('contactModal');
+                openModal('successModal');
+                
+                
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
